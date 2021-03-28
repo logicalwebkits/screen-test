@@ -1,5 +1,3 @@
-# screen-test
-
 # front-end : vue.js
 # back-end : golang
 # sql : Mysql
