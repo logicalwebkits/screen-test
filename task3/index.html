@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Task 3</title>
+    <!-- include vue -->
+    <script src="js/vue.js"></script>
+    <!-- axios -->
+    <style>
+  @import 'style.css';
+	</style>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/axios/0.15.3/axios.min.js"></script>
+  </head>
+  <body>
+	  
+	  
+	  <div id="tab">
+		  <div class="input-area">
+		  <label>Login ID</label>
+		  <input v-model="login_id" placeholder="Login ID">
+		  <br>
+		  <label>Full Name</label>
+		  <input v-model="full_name" placeholder="Full Name">
+		  <br>
+		   <button  v-on:click = "crawl">{{ submission }}</button>
+		  
+		  </div>
+		  <p class="errors" >{{ error }}</p>
+		  <p class="success" >{{ success }}</p>
+		
+    <table>
+		
+		 <tr>
+     <th>Login ID</th>
+     <th>Full Name</th>
+     <th></th>
+   </tr>
+
+
+
+  <tbody>
+    <tr v-for="row in users">
+		<td >{{row.login_id}}</td>
+		<td >{{row.full_name}}</td>
+   <td>  <input type='button' value='Update' @click='updateRecord(row.id);'>&nbsp;
+     <input type='button' value='Delete' @click='deleteRecord(row.id)'></td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+  </body>
+  <script src="js/vue_computedprops.js"></script>
+</html>

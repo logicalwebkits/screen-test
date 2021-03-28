@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Task 1</title>
+    <!-- include vue -->
+    <script src="js/vue.js"></script>
+    <!-- axios -->
+    <style>
+  @import 'style.css';
+	</style>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/axios/0.15.3/axios.min.js"></script>
+  </head>
+  <body>
+	  
+	  
+	  <div id="tab">
+		  <div class="input-area">
+		  
+		  <input v-model="url" placeholder="URL to Crawl">
+		  
+		   <button  v-on:click = "crawl">Submit</button>
+		  
+		  </div>
+		  <p>URL to be Captured : {{ url }}</p>
+		
+    <table>
+  <tbody>
+    <tr v-for="row in posts">
+		<td v-for="r in row">{{r.name}} : {{r.count}}</td>
+     
+    </tr>
+  </tbody>
+</table>
+</div>
+
+  </body>
+  <script src="js/vue_computedprops.js"></script>
+</html>

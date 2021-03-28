@@ -1,0 +1,30 @@
+.input-area input
+{
+    width: 250px;
+    padding: 5px;
+    font-size: 18px;
+  
+        outline: none;
+
+}
+
+.input-area button	
+{    padding: 8px 20px;
+    font-size: 16px;
+    background: #4242ff;
+    color: white;
+    border: none;
+    cursor: pointer;
+
+}
+#tab table
+{
+ border-spacing: 10px;
+    border-collapse: separate;
+}
+#tab table tr td {
+   border: 1px solid gray;
+    padding: 5px;
+    text-align: center;
+}
+ 

@@ -1,0 +1,46 @@
+.input-area label
+{
+
+    min-width: 100px;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.input-area input {
+    padding: 5px;
+    font-size: 15px;
+}
+
+
+.input-area button	
+{    padding: 8px 20px;
+    font-size: 16px;
+    background: #4242ff;
+    color: white;
+    border: none;
+    cursor: pointer;
+
+}
+.errors
+{
+    color: red;
+
+}
+.success
+{
+    color: green;
+
+}
+
+table
+{
+    border-collapse: inherit;
+    width: 100%;
+    max-width: 600px;
+}
+
+table th , table td
+{
+    text-align: left;
+
+}

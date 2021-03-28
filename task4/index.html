@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Task 1</title>
+    <!-- include vue -->
+<script src="//unpkg.com/vue"></script>
+    <!-- axios -->
+    <style>
+  @import 'style.css';
+	</style>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/axios/0.15.3/axios.min.js"></script>
+        <script src="//cdn.jsdelivr.net/npm/vue-ctk-date-time-picker@1.4.1/dist/vue-ctk-date-time-picker.umd.js" charset="utf-8"></script>
+
+  </head>
+  <body>
+	  
+	  
+<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/vue-ctk-date-time-picker@1.4.1/dist/vue-ctk-date-time-picker.css">
+    <div id="app">
+      <vue-ctk-date-time-picker label="Pick Date time"  format="YYYY-MM-DD HH:mm" v-model="Date" range></vue-ctk-date-time-picker>
+      
+        <button  v-on:click = "crawl">Submit</button>
+        <p>{{lastmonth}}</p>
+    </div>
+
+
+
+
+    <script type="text/javascript">
+      Vue.component('vue-ctk-date-time-picker', window['vue-ctk-date-time-picker']);
+      new Vue({
+        el: '#app',
+         data: {
+			Date: "",
+        lastmonth :""
+    }, methods: {
+		crawl : function(event) {
+			this.lastmonth = ""
+         
+      
+
+
+
+			if (this.Date !="" ){
+         
+            const params = new URLSearchParams()
+params.append('Date', this.Date)
+
+              axios.post('http://localhost:1010/lastday', params ,{ headers: {
+      'Content-type': 'application/x-www-form-urlencoded',
+      } } ).then(response => {
+	 
+			this.lastmonth = "Last Day of Month : "+response.data.LastDayOfMonth
+            });
+		}
+                 
+               }
+    }
+      });
+    </script>
+    
+
+  </body>
+ 
+
+</html>
+

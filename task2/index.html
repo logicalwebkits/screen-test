@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Task 2</title>
+    <!-- include vue -->
+    <script src="js/vue.js"></script>
+    <!-- axios -->
+    <style>
+  @import 'style.css';
+	</style>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/axios/0.15.3/axios.min.js"></script>
+  </head>
+  <body>
+	  
+	  
+	  <div id="tab">
+		  <div class="input-area">
+		  
+		  <input v-model="s" placeholder="Column to Start">
+		  <input v-model="r" placeholder="No.of Rows">
+		  <input v-model="c" placeholder="No.of Columns">
+		  
+		   <button  v-on:click = "crawl">Submit</button>
+		  
+		  </div>
+		 
+    <table>
+  <tbody>
+    <tr v-for="row in posts">
+		<td v-for="r in row">{{r}}</td>
+     
+    </tr>
+  </tbody>
+</table>
+</div>
+
+  </body>
+  <script src="js/vue_computedprops.js"></script>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Task 5</title>
+    <!-- include vue -->
+    <script src="js/vue.js"></script>
+    <!-- axios -->
+    <style>
+  @import 'style.css';
+	</style>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/axios/0.15.3/axios.min.js"></script>
+  </head>
+  <body>
+	  
+	  
+	  <div id="tab">
+		  <div class="input-area">
+		  
+		  <input v-model="number" placeholder="Enter Number">
+		  
+		   <button  v-on:click = "crawl">Submit</button>
+		  
+		  </div>
+		  <p>{{ prime }}</p>
+		
+    
+</div>
+
+  </body>
+  <script src="js/vue_computedprops.js"></script>
+</html>
