@@ -1,6 +1,6 @@
-# front-end : vue.js
-# back-end : golang
-# sql : Mysql
+# Front-end : vue.js
+# Back-end : golang
+# Sql : Mysql
 
 
 Following 5 tasks completed 
